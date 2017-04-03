@@ -37,6 +37,8 @@ int main()
     }
 
     cout<<label1<<"("<<miuSuhu1<<")"<<endl;
+
+    asdasdsad
     cout<<label2<<"("<<miuSuhu2<<")";
 
     return 0;
