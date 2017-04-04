@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    double suhu,miuSuhu1,miuSuhu2;
+    double suhu,miuSuhu1,miuSuhu2,kelembapan,miuLembab1, miuLembab2;
     string label1,label2; //label1 turun label2 naik
     cout<<"Masukkan Suhu: ";
     cin>>suhu;
@@ -37,9 +37,27 @@ int main()
     }
 
     cout<<label1<<"("<<miuSuhu1<<")"<<endl;
-
-    asdasdsad
-    cout<<label2<<"("<<miuSuhu2<<")";
+    cout<<label2<<"("<<miuSuhu2<<")"<<endl;
+    cout<<"Masukan kelembapan : ";
+    cin>>kelembapan;
+    if((kelembapan<=10) || (kelembapan>=20 && kelembapan <=40) || (kelembapan >=50)){
+       miuLembab1 = 1;
+       miuLembab2 = 0;
+    }
+    else if (kelembapan >10 && kelembapan <20){
+        miuLembab1 = -((kelembapan-20)/(20-10));
+        label1 = "Kering";
+        miuLembab2 = (kelembapan-10)/(20-10);
+        label2 = "Lembab";
+    }
+    else if (kelembapan >20 && kelembapan <40){
+        miuLembab1 = -((kelembapan-50)/(50-40));
+        label1 = "Lembap";
+        miuLembab2 = (kelembapan-40)/(50-40);
+        label2 = "Basah";
+    }
+    cout<<label1<<"("<<miuLembab1<<")"<<endl;
+    cout<<label2<<"("<<miuLembab2<<")";
 
     return 0;
 }
