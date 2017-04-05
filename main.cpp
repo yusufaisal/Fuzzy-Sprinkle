@@ -2,10 +2,11 @@
 
 using namespace std;
 
+
 int main()
 {
     double suhu,miuSuhu1,miuSuhu2,kelembapan,miuLembab1,miuLembab2 = 0;
-    string label1suhu,label2suhu,label1lembab,label2lembab = " "; //label1 turun label2lembab naik
+    string label1suhu,label2suhu,label1lembab,label2lembab = " "; //label1 turun label2 naik
     cout<<"Masukkan Suhu: ";
     cin>>suhu;
     if (suhu <= 0){
@@ -33,19 +34,19 @@ int main()
         label1suhu = "Panas";
         miuSuhu2 = 0;
     }
-    else if ((suhu > 0 && suhu < 3)){
+    else if ((suhu > 0) && (suhu < 3)){
         miuSuhu1 = -((suhu-3)/(3-0));
         label1suhu = "Dingin";
         miuSuhu2 = ((suhu-0)/3-0);
         label2suhu = "Sejuk";
     }
-    else if ((suhu > 12 && suhu < 15)){
+    else if ((suhu > 12) && (suhu < 15)){
         miuSuhu1 = -((suhu-15)/(15-12));
         label1suhu = "Sejuk";
         miuSuhu2 = ((suhu-12)/(15-12));
         label2suhu = "Normal";
     }
-    else if ((suhu > 24 && suhu < 27)){
+    else if ((suhu > 24) && (suhu < 27)){
         miuSuhu1 = -((suhu-27)/(27-24));
         label1suhu = "Normal";
         miuSuhu2 = ((suhu-24)/(27-24));
@@ -89,7 +90,6 @@ int main()
         label2lembab = "Basah";
     }
 
-
     if ((miuLembab2 == 0) && (miuSuhu2 == 0)){
         cout<<label1suhu<<"("<<miuSuhu1<<")"<<endl;
         cout<<label1lembab<<"("<<miuLembab1<<")"<<endl;
@@ -111,5 +111,6 @@ int main()
         cout<<label2lembab<<"("<<miuLembab2<<")";
     }
 
+    //inference
     return 0;
 }
