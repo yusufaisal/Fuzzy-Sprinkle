@@ -90,7 +90,7 @@ int main()
     }
 
 
-    if ((miuLembab2 == 0) && (miuLembab2 == 0)){
+    if ((miuLembab2 == 0) && (miuSuhu2 == 0)){
         cout<<label1suhu<<"("<<miuSuhu1<<")"<<endl;
         cout<<label1lembab<<"("<<miuLembab1<<")"<<endl;
     }
